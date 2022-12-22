@@ -8,12 +8,12 @@ interface GitResponse {
 
 async  function runSample() {
     const octokit = new Octokit({
-        auth: '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'
+        auth: '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'
     })
 
-    let response = await octokit.request('GET /repos/{owner}/{repo}/stats/commit_activity', {
+    let response = await octokit.request('GET /repos/{owner}/{repo}/stats/contributors', {
         owner: 'vbhandar12',
-        repo: 'Dev'
+        repo: 'GitRestAPIClient'
     })
    console.log(response);
 //     let result: AxiosResponse = await axios.get(`http://localhost:3000/`);
